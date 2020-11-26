@@ -2,7 +2,7 @@
 Optical Character Recognition
 
 ### Main.py 
-In this file all the main program is being run
+In this file all the main code is present.
 
 ### Preprocessing.py 
 This contains all the preprocessing function which are required in the main OCR.
