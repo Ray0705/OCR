@@ -31,7 +31,6 @@ def check_text_or_not(file):
         total_text_area = total_text_area + text_area
     doc.close()
     perc =  total_text_area / total_page_area
-    print(perc)
     if perc < 0.01:
         return True
     else:
