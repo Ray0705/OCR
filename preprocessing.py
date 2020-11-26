@@ -5,7 +5,6 @@ from PIL import Image, ImageEnhance
 from pdf2image import convert_from_path
 import os
 import shutil
-from enchant.checker import SpellChecker
 import cv2
 
 # converting the pdf to images for OCR
