@@ -1,7 +1,5 @@
-from itertools import islice
 import numpy as np
-import PyPDF2
-from PIL import Image, ImageEnhance
+from PIL import ImageEnhance
 from pdf2image import convert_from_path
 import os
 import shutil
