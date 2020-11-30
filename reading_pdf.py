@@ -1,6 +1,6 @@
 import PyPDF2 as pdf
 from tika import parser
-import fitz
+import subprocess
 
 def read_pdf(file):
     """PyPDF2 package is used to extract text from the pdf directly."""
