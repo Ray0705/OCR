@@ -1,14 +1,5 @@
-import PyPDF2 as pdf
 from tika import parser
 import subprocess
-
-def read_pdf(file):
-    """PyPDF2 package is used to extract text from the pdf directly."""
-    file = open(file,'rb')
-    pdfreader = pdf.PdfFileReader()
-    pdf_data = pdfreader.extractText()
-    file.close()
-    return pdf_data
 
 def read_pdf2(file):
     """Tika package is also used to extract text from pdf directly"""
