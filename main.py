@@ -17,7 +17,7 @@ test = test_file_6
 
 conversion_file = r'Z:\D2K\OCR Code\Task 1\Test\conversion_'+ test.split("\\")[-1].split(".")[0]
 
-if R.check_text_or_not(test):
+if R.check_scanned_or_not(test):
     text = R.read_pdf2(test)
     text_file = open(conversion_file + "\\all.txt", "w", encoding="utf-8")
     text_file.write(text)
