@@ -16,22 +16,12 @@ def read_pdf2(file):
     raw_text = parser.from_file(file)
     return raw_text['content']
 
-def check_text_or_not(file):
-    total_page_area = 0.0
-    total_text_area = 0.0
-
-    doc = fitz.open(file)
-
-    for page_num, page in enumerate(doc):
-        total_page_area = total_page_area + abs(page.rect)
-        text_area = 0.0
-        for b in page.getTextBlocks():
-            r = fitz.Rect(b[:4])  # rectangle where block text appears
-            text_area = text_area + abs(r)
-        total_text_area = total_text_area + text_area
-    doc.close()
-    perc =  total_text_area / total_page_area
-    if perc < 0.01:
-        return True
-    else:
-        return False
+def check_scanned_or_not(file_name):
+    cmd = ['pdffonts', file_name]
+    proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, bufsize=0, text=True, shell=False)
+    out, err = proc.communicate()
+    scanned = True
+    for idx, line in enumerate(out.splitlines()):
+        if idx == 2:
+            scanned = False
+    return scanned
