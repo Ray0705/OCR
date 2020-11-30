@@ -17,6 +17,7 @@ def read_pdf2(file):
     return raw_text['content']
 
 def check_scanned_or_not(file_name):
+    """subprocess is used to check whether the given document is scanned document or non scanned."""
     cmd = ['pdffonts', file_name]
     proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, bufsize=0, text=True, shell=False)
     out, err = proc.communicate()
