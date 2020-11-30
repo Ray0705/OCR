@@ -6,17 +6,12 @@ import deskew
 import reading_pdf as R
 
 pytesseract.pytesseract.tesseract_cmd =r'C:\Program Files\Tesseract-OCR\tesseract.exe'
-test_file_1 = r'Z:\D2K\OCR Code\Task 1\Test\ABFL IGAAP Signed Financials March 2018.pdf'
-test_file_2 = r'Z:\D2K\OCR Code\Task 1\Test\Adler Final Signed Financials FY 2018-19 and audit report_.pdf'
-test_file_3 = r'Z:\D2K\OCR Code\Task 1\Test\Audit Report ABF_compressed.pdf'
-test_file_4 = r'Z:\D2K\OCR Code\Task 1\Test\Financial Statement.pdf'
-test_file_5 = r'Z:\D2k\OCR code\Task 1\Test\AK TRADING AUDIT REPORT COMPRESSED.pdf'
-test_file_6 = r'Z:\D2k\OCR code\Task 1\Test/Financials AR DR.pdf'
+test_file_1 = r'Test\ABFL IGAAP Signed Financials March 2018.pdf'
 test_file = test_file_1
 
 # Creating the path or folder where the pdf is converted to text file, the folder name is converted the filename
 # for eg:- if the name of the pdf file is financials.pdf then the created folder will have converted_financials
-converted_folder = r'Z:\D2K\OCR Code\Task 1\Test'+'\\'+ test_file.split("\\")[-1].split(".")[0]
+converted_folder = r'Test'+'\\'+ test_file.split("\\")[-1].split(".")[0]
 
 
 if not R.check_scanned_or_not(test_file):
