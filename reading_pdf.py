@@ -1,7 +1,7 @@
 from tika import parser
 import subprocess
 
-def read_pdf2(file):
+def read_pdf(file):
     """Tika package is also used to extract text from pdf directly"""
     """Java is required for it to run"""
     raw_text = parser.from_file(file)
