@@ -30,7 +30,7 @@ else:
     # converting the pdf into images
     images = P.convert_into_image(test_file)
     P.create_new_folder(converted_folder)
-    text_file  =  open(converted_folder + "\\" + test_file.split("\\")[-1].split(".")[0] +".txt","w",encoding="utf-8")
+    text_file = open(converted_folder + "\\" + test_file.split("\\")[-1].split(".")[0] +".txt","w",encoding="utf-8")
     for count, image in enumerate(images):
         # saving the image in jpeg or png format as pytessaract requires jpeg file not ppmimage format
         # saving the image in the converted folder
